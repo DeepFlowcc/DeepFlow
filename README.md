@@ -55,4 +55,31 @@ AI+Web3 Marketplace
 We’re building an MCP (Model Context Protocol) service marketplace, integrating AI code generation into wallets like Trust Wallet, driving the next wave of decentralized intelligence.
 Project Structure
 
+deepflow/
+├── src/          # Core platform logic
+│   ├── agents/   # Multi-agent system
+│   ├── web3/     # Web3 integrations
+│   └── ui/       # WYSIWYG interface
+├── docs/         # Documentation
+└── README.md     # This file
+
+Contributing
+We welcome contributions! To get started:
+Fork the repository.
+
+Create a feature branch (git checkout -b feat/new-feature).
+
+Commit your changes (git commit -m "Add new feature").
+
+Push to the branch (git push origin feat/new-feature).
+
+Open a Pull Request.
+
+License
+Licensed under the MIT License (LICENSE).
+Contact
+Email: hello@deepflow.dev
+
+Issues: GitHub Issues
+
 
