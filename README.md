@@ -30,3 +30,29 @@ DeepFlow is a pioneering platform that redefines AI-driven code generation for W
    ```bash
    git clone https://github.com/username/deepflow.git
    cd deepflow
+   
+2.Install dependencies:
+  ```
+  npm install
+
+3.Launch the platform:
+   ```bash
+   npm run start
+
+
+### Why DeepFlow? ####
+
+## Efficiency: Multi-agent workflows boost coding speed and bridge knowledge gaps.
+
+## Empowerment: Integrates diverse programming expertise into a unified experience.
+
+Innovation: Pioneers the fusion of AI and Web3 technologies.
+
+Advanced Features
+BSC Knowledge Base
+Explore our comprehensive Binance Smart Chain (BSC) technical documentation, powered by an interactive LLM for real-time Q&A.
+AI+Web3 Marketplace
+We’re building an MCP (Model Context Protocol) service marketplace, integrating AI code generation into wallets like Trust Wallet, driving the next wave of decentralized intelligence.
+Project Structure
+
+
