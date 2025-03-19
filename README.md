@@ -57,7 +57,6 @@ DeepFlow is a sophisticated AI framework that combines multi-agent systems with 
 
 ### Prerequisites
 - Python 3.8 or higher
-- Node.js 16+ (for Web3 features)
 - Git
 
 ### Quick Start
