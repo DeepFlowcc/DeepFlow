@@ -1,105 +1,178 @@
 # DeepFlow
 
-**The Coding Canvas is Now in Your Wallet!**  
-Transform your Web3 wallet into a coding playground.
+**AI-Powered Multi-Agent Framework for Web3 Development**
 
-[![License](https://img.shields.io/github/license/username/deepflow)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/username/deepflow)](https://github.com/username/deepflow/stargazers)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/username/deepflow/releases)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
+[![Version](https://img.shields.io/badge/version-1.12.0.dev0-blue)](https://github.com/username/deepflow/releases)
 
 ## Overview
 
-DeepFlow is a pioneering platform that redefines AI-driven code generation for Web3 applications. Seamlessly connect your Web3 wallet to a browser-based Web Container and build, debug, and deploy Web3 apps in an intuitive WYSIWYG (What You See Is What You Get) environment. With DeepFlow, unleash your creativity, accelerate development, and lead the blockchain revolution.
+DeepFlow is a sophisticated AI framework that combines multi-agent systems with Web3 capabilities, enabling intelligent code generation and automation. Built on top of the HuggingFace ecosystem, it provides a comprehensive suite of tools for building, debugging, and deploying AI-powered applications with blockchain integration.
 
-## Key Features
+## Core Features
 
-- **Multi-Modal Creation**
-  - Generate code from hand-drawn sketches, screenshots, or natural language
-  - Intuitive WYSIWYG interface for rapid development
+### 🤖 Advanced Agent System
+- **Multi-Step Agent Architecture**
+  - Sophisticated planning and execution pipeline
+  - State management with memory systems
+  - Dynamic tool integration capabilities
 
-- **Zero-Coding Simplicity**
-  - No programming expertise required
-  - One-click app building and deployment
+- **Specialized Agents**
+  - `ToolCallingAgent`: Expert at utilizing external tools and APIs
+  - `CodeAgent`: Specialized in code generation and execution
+  - Support for custom agent implementations
 
-- **Multi-Agent Engine**
-  - Intelligent agents for front-end and back-end development
-  - Automated code optimization and debugging
+### 🛠️ Comprehensive Tooling
+- **Built-in Tools**
+  - Python code execution environment
+  - Web3 integration tools
+  - File system operations
+  - Web search capabilities
 
-- **Web3 Ready**
-  - Seamless wallet integration
-  - Built-in support for crypto transactions
-  - Real-time blockchain data queries
+- **Extensible Tool System**
+  - Custom tool development framework
+  - Tool validation and safety checks
+  - Rich type system for tool inputs/outputs
 
-- **Continuous Refinement**
-  - Natural language code optimization
-  - Interactive debugging and enhancement
+### 🧠 AI Model Integration
+- **Flexible Model Support**
+  - Compatible with HuggingFace models
+  - Support for custom model implementations
+  - Structured prompt templates
 
-## Why DeepFlow?
+### 📊 Memory & State Management
+- **Sophisticated Memory System**
+  - Action tracking and history
+  - Planning state management
+  - Task contextualization
 
-- **Efficiency**: Multi-agent workflows boost coding speed and bridge knowledge gaps
-- **Empowerment**: Integrates diverse programming expertise into a unified experience
-- **Innovation**: Pioneers the fusion of AI and Web3 technologies
+### 🌐 Web3 Features
+- **Blockchain Integration**
+  - Wallet connectivity
+  - Smart contract interaction
+  - Transaction management
 
-## Advanced Features
-
-### BSC Knowledge Base
-Explore our comprehensive Binance Smart Chain (BSC) technical documentation, powered by an interactive LLM for real-time Q&A.
-
-### AI+Web3 Marketplace
-We're building an MCP (Model Context Protocol) service marketplace, integrating AI code generation into wallets like Trust Wallet, driving the next wave of decentralized intelligence.
-
-## Getting Started
+## Installation
 
 ### Prerequisites
-- Node.js 16+ (for Web Container)
-- A modern browser (e.g., Chrome, Firefox)
-- A Web3 wallet (e.g., MetaMask, Trust Wallet)
+- Python 3.8 or higher
+- Node.js 16+ (for Web3 features)
+- Git
 
-### Installation
+### Quick Start
 
-1. Clone the repository:
+1. Install via pip:
+   ```bash
+   pip install deepflow
+   ```
+
+2. Or install from source:
    ```bash
    git clone https://github.com/username/deepflow.git
    cd deepflow
+   pip install -e .
    ```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+## Usage Examples
 
-3. Launch the platform:
-   ```bash
-   npm run start
-   ```
+### Basic Agent Usage
+```python
+from deepflow import MultiStepAgent, Tool
+from deepflow.models import get_model
+
+# Initialize model and tools
+model = get_model("gpt-3.5-turbo")
+tools = [Tool(...)]  # Add your tools
+
+# Create agent
+agent = MultiStepAgent(
+    tools=tools,
+    model=model,
+    max_steps=20
+)
+
+# Run a task
+result = agent.run("Create a simple web application")
+```
+
+### Web3 Integration
+```python
+from deepflow.web3 import Web3Agent
+from deepflow.tools import BlockchainTool
+
+# Initialize Web3 agent
+agent = Web3Agent(
+    tools=[BlockchainTool()],
+    model=model
+)
+
+# Interact with blockchain
+result = agent.run("Deploy a smart contract")
+```
 
 ## Project Structure
 
 ```
 deepflow/
-├── src/          # Core platform logic
-│   ├── agents/   # Multi-agent system
-│   ├── web3/     # Web3 integrations
-│   └── ui/       # WYSIWYG interface
-├── docs/         # Documentation
-└── README.md     # This file
+├── src/
+│   ├── core/           # Core agent implementation
+│   ├── models/         # AI model integrations
+│   ├── tools/          # Tool implementations
+│   ├── runtime/        # Execution environments
+│   ├── interface/      # UI and CLI components
+│   ├── utils/          # Utility functions
+│   └── web3/          # Blockchain integrations
+├── docs/              # Documentation
+└── tests/             # Test suite
+```
+
+## Development
+
+### Setting Up Development Environment
+
+1. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Linux/Mac
+   # or
+   venv\Scripts\activate     # Windows
+   ```
+
+2. Install development dependencies:
+   ```bash
+   pip install -r requirements-dev.txt
+   ```
+
+### Running Tests
+```bash
+pytest tests/
 ```
 
 ## Contributing
 
-We welcome contributions! To get started:
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feat/new-feature`)
-3. Commit your changes (`git commit -m "Add new feature"`)
-4. Push to the branch (`git push origin feat/new-feature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## Documentation
+
+- [API Reference](docs/api.md)
+- [Architecture Guide](docs/architecture.md)
+- [Tool Development Guide](docs/tools.md)
+- [Web3 Integration Guide](docs/web3.md)
 
 ## License
 
-Licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Licensed under the Apache License, Version 2.0 - see the [LICENSE](LICENSE) file for details.
 
-## Contact
+## Contact & Support
 
-- **Email**: hello@deepflow.dev
-- **Issues**: [GitHub Issues](https://github.com/username/deepflow/issues) 
+- **Documentation**: [https://deepflow.readthedocs.io](https://deepflow.readthedocs.io)
+- **Issues**: [GitHub Issues](https://github.com/username/deepflow/issues)
+- **Discord**: [Join our community](https://discord.gg/deepflow)
+- **Email**: support@deepflow.dev 
